@@ -28,7 +28,7 @@ preload();
 function preload() {
   const preData = JSON.parse(localStorage.getItem(storageKey));
   if (preData) {
-    fbEmail.value = preData.email;
-    fbMessage.value = preData.message;
+    fbEmail.value = preData.email || '';
+    fbMessage.value = preData.message || '';
   }
 }
